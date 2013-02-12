@@ -1,0 +1,44 @@
+# Mac OS X
+*.DS_Store
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+xcuserdata
+
+# Generated files
+*.o
+*.pyc
+
+
+#Python modules
+MANIFEST
+dist/
+build/
+
+# Backup files
+*~.nib
+
+# Xcode
+build/*
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+profile
+*.moved-aside
+
+.idea/vcs.xml
+.idea/.name
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/workspace.xml
+.idea/xcode.xml
+
