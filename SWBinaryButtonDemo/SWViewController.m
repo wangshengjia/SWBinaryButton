@@ -21,13 +21,11 @@
     [super viewDidLoad];
     
     UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    button1.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"button1.png"]];
-    [button1 setContentMode:UIViewContentModeScaleAspectFill];
+	[button1 setBackgroundImage:[UIImage imageNamed:@"button1.png"] forState:UIControlStateNormal];
 	[button1 addTarget:self action:@selector(button1Tapped:) forControlEvents:UIControlEventTouchUpInside];
     
 	UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    button2.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"button2.png"]];
-    [button2 setContentMode:UIViewContentModeScaleAspectFill];
+	[button2 setBackgroundImage:[UIImage imageNamed:@"button2.png"] forState:UIControlStateNormal];
 	[button2 addTarget:self action:@selector(button2Tapped:) forControlEvents:UIControlEventTouchUpInside];
     
 	SWBinaryButton *binaryButton = [[SWBinaryButton alloc] initWithFirstButton:button1 secondButton:button2 frame:CGRectMake(100, 100, 50, 50)];
