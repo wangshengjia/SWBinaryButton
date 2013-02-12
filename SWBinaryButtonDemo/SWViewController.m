@@ -7,6 +7,8 @@
 //
 
 #import "SWViewController.h"
+#import "SWBinaryButton.h"
+//#import <QuartzCore/QuartzCore.h>
 
 @interface SWViewController ()
 
@@ -17,7 +19,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button1.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"button1.png"]];
+    [button1 setContentMode:UIViewContentModeScaleAspectFill];
+	[button1 addTarget:self action:@selector(button1Tapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+	UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button2.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"button2.png"]];
+    [button2 setContentMode:UIViewContentModeScaleAspectFill];
+	[button2 addTarget:self action:@selector(button2Tapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+	SWBinaryButton *binaryButton = [[SWBinaryButton alloc] initWithFirstButton:button1 secondButton:button2 frame:CGRectMake(100, 100, 50, 50)];
+	[self.view addSubview:binaryButton];
+    
+}
+
+- (void)button1Tapped:(id)sender {
+	NSLog(@"button1 tapped");
+}
+
+- (void)button2Tapped:(id)sender {
+	NSLog(@"button2 tapped");
 }
 
 - (void)didReceiveMemoryWarning
